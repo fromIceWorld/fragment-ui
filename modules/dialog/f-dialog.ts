@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from 'mark5';
             #dialog
             &style="{display:display ? 'block' : 'none'}"
         >
-            <div &style="style" class="f-dialog-modal">
+            <div class="f-dialog-modal">
                 <div class="f-dialog-header">
                     <span class="f-dialog-header-item f-dialog-header-title">{{
                         title
@@ -59,16 +59,16 @@ import { Component, EventEmitter, Input, Output, ViewChild } from 'mark5';
 })
 class FragmentDialog {
     @Input('style') style;
-    @Input('display') display;
+    @Input('value') display;
     @Input('title') title;
-    @Output('OnCancel') OnCancel = new EventEmitter('OnCancel');
+    @Output('display') OnCancel = new EventEmitter('display');
     @ViewChild('dialog') dialogRef;
     OnInputChanges(obj) {
         console.log('OnInputChanges', obj);
     }
     closeDialog(e) {
         this.dialogRef.attributeStyleMap.set('display', 'none');
-        this.OnCancel.emit('');
+        this.OnCancel.emit(false);
         console.log(this.dialogRef);
     }
 }

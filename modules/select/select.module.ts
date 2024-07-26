@@ -3,7 +3,7 @@ import { FragmentOption } from './f-option';
 import { FragmentSelect } from './f-select';
 @Module({
     declarations: [FragmentSelect, FragmentOption],
-    exports: [FragmentSelect, FragmentOption],
+    exports: [],
 })
 class SelectModule {}
 export { SelectModule };

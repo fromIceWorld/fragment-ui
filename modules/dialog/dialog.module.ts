@@ -3,7 +3,7 @@ import { FragmentDialog } from './f-dialog';
 
 @Module({
     declarations: [FragmentDialog],
-    exports: [FragmentDialog],
+    exports: [],
 })
 class DialogModule {}
 export { DialogModule };

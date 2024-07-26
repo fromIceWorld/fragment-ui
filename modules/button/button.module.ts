@@ -2,7 +2,7 @@ import { Module } from 'mark5';
 import { FragmentButton } from './f-button';
 @Module({
     declarations: [FragmentButton],
-    exports: [FragmentButton],
+    exports: [],
 })
 class ButtonModule {}
 export { ButtonModule };
